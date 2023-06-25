@@ -1,0 +1,12 @@
+.header {
+    background-color: var(--orange);
+    height: 5rem;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
