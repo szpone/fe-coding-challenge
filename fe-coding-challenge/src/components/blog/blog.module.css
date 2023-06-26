@@ -1,0 +1,32 @@
+.title {
+    color: var(--blog);
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px
+}
+
+.text {
+    color: var(--blog);
+    font-weight: 700;
+    font-family: Advent Pro;
+    line-height: 24px;
+}
+
+.blogImg {
+    object-fit: contain;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 21px;
+}
+
+.imgContainer {
+    display: "flex";
+}
+
+.pillContainer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+    padding-bottom: 16px
+}
