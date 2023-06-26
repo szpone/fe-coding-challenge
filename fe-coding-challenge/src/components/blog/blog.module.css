@@ -30,3 +30,13 @@
     padding-top: 16px;
     padding-bottom: 16px
 }
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    max-width: 344px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+/* <div style={{display: "flex", flexDirection: "column", maxWidth: "344px", paddingTop: "40px", paddingBottom: "50px"}}> */
