@@ -107,8 +107,8 @@
 }
 
 @media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 900px) 
+and (min-device-width: 375px) 
+and (max-device-width: 1200px) 
 and (orientation: portrait) {
   .description {
     display: none;
