@@ -7,10 +7,9 @@ interface ListProps {
     posts: Post[]
 }
 const PostList: React.FC<ListProps> = ({ posts }) => {
-    const sortedList = [...posts].sort((a: Post, b: Post) => a.date.toMillis() - b.date.toMillis())
     return (
         <div className={styles.postList}>
-            {sortedList.map((post: Post) => <PostPreview post={post} key={post.id} />)}
+            {posts.map((post: Post) => <PostPreview post={post} key={post.id} />)}
         </div>
 
     )
