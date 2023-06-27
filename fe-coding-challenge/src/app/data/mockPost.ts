@@ -1,5 +1,5 @@
-import placeholder from '../../../public/assets/images/blog-post-two.jpg'
-import { DateTime  } from 'luxon'
+import placeholder from '../../../public/assets/images/blog-post-two.jpg';
+import { DateTime } from 'luxon';
 
 
 export type Post = {
@@ -13,7 +13,6 @@ export type Post = {
     id: number,
     subTitle: string
 }
-
 
 export const postMock = {
     title: 'Case study',
@@ -31,6 +30,6 @@ export const postMock = {
     `,
     image: placeholder.src,
     subTitle: 'About this event'
-}
+};
 
 export const mockPostList = [1, 2, 3, 4, 5].map((num: number) => ({...postMock, id: num, date: DateTime.local(2023, num, 5)}))

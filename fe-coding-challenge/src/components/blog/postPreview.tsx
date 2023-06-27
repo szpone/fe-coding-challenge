@@ -15,7 +15,7 @@ const PostPreview: React.FC<PreviewProps> = ({ post }) => {
     return (
         <Link className={styles.link} href={`post/${id}`}>
         <article className={styles.preview}>
-            <Image className={styles.blogImg} src={image} alt="No image" width={334} height={229}/>
+            <Image className={styles.previewImg} src={image} alt="No image" width={334} height={229}/>
             <h2 className={styles.title}>{title}</h2>
             <section className={styles.info}> 
                 <Pill text={category} />

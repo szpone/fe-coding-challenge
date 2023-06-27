@@ -12,6 +12,6 @@ const Main: React.FC<MainProps> = ({ children }) => {
             {children}
         </main>
     )
-}
+};
 
 export default Main;

@@ -25,7 +25,7 @@ const PostDetails: React.FC<DetailsProps> = ({ post }) => {
                     <div className={styles.item}>
                         <span className={styles.place}> Corn Exchange, Wintey, Oxfordshire</span>
                         <div className={styles.eventDetails}>
-                        <span>Free </span>
+                        <span>Free</span>
                         <span>{DateTime.fromISO(date).toLocaleString(DateTime.TIME_24_SIMPLE)} | {DateTime.fromISO(date).toFormat('d LLL yyyy')}</span>
                         </div>
                     </div>
@@ -37,6 +37,6 @@ const PostDetails: React.FC<DetailsProps> = ({ post }) => {
                 </section>
             </article>
     )
-}
+};
 
 export default PostDetails;

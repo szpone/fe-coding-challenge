@@ -15,7 +15,7 @@
     padding-top: 12px;
 }
 
-.blogImg {
+.previewImg {
     object-fit: fill;
     height: auto;
     max-width: 100%;
@@ -27,17 +27,16 @@
     display: flex;
     flex-direction: row;
     padding-top: 16px;
-    padding-bottom: 16px
+    padding-bottom: 16px;
 }
-
 
 .preview {
     display: flex;
     flex-direction: column;
     max-width: 344px;
     padding: 15px;
-    transition: background-color 150ms linear;
     border-radius: 10px;
+    transition: background-color 150ms linear;
 }
 
 .preview:hover {
