@@ -30,6 +30,7 @@
     padding-bottom: 16px
 }
 
+
 .preview {
     display: flex;
     flex-direction: column;
@@ -56,6 +57,10 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--grey);
+}
+
+.previewDate {
+    display: none;
 }
 
 .postTitle {
@@ -102,6 +107,18 @@
     justify-content: space-around;
 }
 
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 900px) 
+and (orientation: portrait) {
+  .description {
+    display: none;
+  }
+  .previewDate {
+    display: unset;
+  }
+}
+
 .item {
     display: flex;
     flex-direction: column;
@@ -129,3 +146,5 @@
 .link {
     text-decoration: none;
 }
+
+

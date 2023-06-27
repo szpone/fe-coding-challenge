@@ -25,6 +25,7 @@ const PostPreview: React.FC<PreviewProps> = ({ post }) => {
             <p className={styles.text}>
                 {postPreview}
             </p>
+            <span className={`${styles.previewDate} ${styles.date}`}>{DateTime.fromISO(date).toFormat('d LLL yyyy')}</span>
         </article>
         </Link>
     )

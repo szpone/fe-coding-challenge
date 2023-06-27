@@ -53,3 +53,12 @@
 .pill:first-of-type {
     margin-right: 21px;
 }
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 900px) 
+and (orientation: portrait) {
+  .pill:last-of-type {
+    display: none;
+  }
+}
