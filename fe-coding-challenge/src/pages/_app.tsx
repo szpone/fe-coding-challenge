@@ -1,6 +1,6 @@
 import Layout from "@/components/layout";
 
-const MyApp = ({ Component, pageProps }: any) => {
+const App = ({ Component, pageProps }: any) => {
     return (
         <Layout>
             <Component {...pageProps} />
@@ -8,4 +8,4 @@ const MyApp = ({ Component, pageProps }: any) => {
     )
 }
 
-export default MyApp;
+export default App;

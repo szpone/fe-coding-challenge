@@ -3,13 +3,13 @@ import PostPreview from './postPreview';
 import styles from '../layout/layout.module.css';
 import { Post } from '@/app/data/mockPost';
 
-interface Props {
+interface ListProps {
     posts: Post[]
 }
-const PostList = ({ posts }: Props) => {
+const PostList: React.FC<ListProps> = ({ posts }) => {
     return (
         <div className={styles.postList}>
-            {posts.map((post: Post) => <PostPreview post={post} key={post.id}/>)}
+            {posts.map((post: Post) => <PostPreview post={post} key={post.id} />)}
         </div>
 
     )

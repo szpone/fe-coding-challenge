@@ -1,16 +1,15 @@
 import PostList from '@/components/blog/postList';
 import React from 'react';
-import Header from '@/components/header';
 import { Post } from '@/app/data/mockPost';
 
-interface Props {
-    postList: Post[]
+interface HomeProps {
+    postList: Post[];
 }
 
-const Home = ({ postList }: Props) => {
+const Home: React.FC<HomeProps> = ({ postList }) => {
     return (
             <>
-                <Header text="Check our latest posts" />
+                <h1>Check our latest posts</h1>
                 <PostList posts={postList}/>
             </>
     )
@@ -26,4 +25,4 @@ export async function getServerSideProps() {
     }
 }
 
-export default Home
+export default Home;

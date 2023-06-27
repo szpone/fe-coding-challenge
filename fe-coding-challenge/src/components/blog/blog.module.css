@@ -16,18 +16,14 @@
 }
 
 .blogImg {
-    object-fit: contain;
+    object-fit: fill;
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 21px;
 }
 
-.imgContainer {
-    display: flex;
-}
-
-.pillContainer {
+.info {
     display: flex;
     flex-direction: row;
     padding-top: 16px;
@@ -38,8 +34,13 @@
     display: flex;
     flex-direction: column;
     max-width: 344px;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding: 15px;
+    transition: background-color 150ms linear;
+    border-radius: 10px;
+}
+
+.preview:hover {
+    background-color: rgba(255, 102, 0, 0.08);
 }
 
 .details {

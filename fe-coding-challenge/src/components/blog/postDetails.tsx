@@ -1,22 +1,21 @@
 import React from 'react';
-import Header from '../header';
-import Button from '../button/button';
+import Button from '../layout/button';
 import styles from '@/components/blog/blog.module.css'
 import { Post } from '@/app/data/mockPost';
 import { DateTime } from 'luxon';
 import Image from 'next/image';
 
-interface Props {
+interface DetailsProps {
     post: Post
 }
 
-const PostDetails = ({ post }: Props) => {
+const PostDetails: React.FC<DetailsProps> = ({ post }) => {
     const { image, date, title, postPreview, postBody, subTitle } = post;
     return (
             <article>
                 <section className={styles.previewSection}>
                 <div className={styles.sectionContent}>
-                    <Header text={title} />
+                    <h1>{title}</h1>
                     <p className={styles.text}>{postPreview}</p>
                     <span className={styles.date}>{DateTime.fromISO(date).toFormat('d LLL yyyy')}</span>
                 </div>
@@ -33,10 +32,8 @@ const PostDetails = ({ post }: Props) => {
                 <Button text="Sign up to this event" />
                 </section>
                 <section className={styles.sectionBody}>
-                    <h2 className={styles.postTitle}> {subTitle} </h2>
-                    <p className={styles.body}>
-                        {postBody}
-                    </p>
+                    <h2 className={styles.postTitle}>{subTitle}</h2>
+                    <p className={styles.body}>{postBody}</p>
                 </section>
             </article>
     )

@@ -1,5 +1,5 @@
 import placeholder from '../../../public/assets/images/blog-post-two.jpg'
-import {DateTime} from 'luxon'
+import { DateTime  } from 'luxon'
 
 
 export type Post = {
