@@ -1,11 +1,15 @@
-import React from "react";
+import React from 'react'
 
-const Header = ({ children }: any) => {
+interface Props {
+    text: string;
+}
+
+const Header = ({ text }: Props) => {
     return (
         <h1>
-            {children}
+            {text}
         </h1>
     )
 }
 
-export default Header
+export default Header;

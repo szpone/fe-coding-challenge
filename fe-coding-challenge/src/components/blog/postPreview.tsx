@@ -1,26 +1,33 @@
 import React from 'react';
 import styles from './blog.module.css'
 import Pill from '../pill/pill';
-import BlogImage from './image';
+import Link from 'next/link';
+import { Post } from '@/app/data/mockPost';
+import Image from 'next/image';
+import { DateTime } from 'luxon';
 
-const PostPreview = () => {
+interface Props {
+    post: Post
+}
+
+const PostPreview = ({ post }: Props) => {
+    const { image, title, category, author, date, postPreview, id } = post;
     return (
-        <div className={styles.preview}>
-            <BlogImage />
-
-            <h2 className={styles.title}>Case study</h2>
-            <div className={styles.pillContainer}> 
-                <Pill text="topic" />
-                <Pill text="user" />
-                <Pill text="123456 80193" />
-            </div>
-            <div className={styles.text}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. 
-            
-            </div>
-
-        </div>
+        <Link className={styles.link} href={`post/${id}`}>
+        <article className={styles.preview}>
+            <Image className={styles.blogImg} src={image} alt="No image" width={334} height={229}/>
+            <h2 className={styles.title}>{title}</h2>
+            <section className={styles.pillContainer}> 
+                <Pill text={category} />
+                <Pill text={author}/>
+                <Pill text={DateTime.fromISO(date).toFormat('d LLL yyyy')} />
+            </section>
+            <p className={styles.text}>
+                {postPreview}
+            </p>
+        </article>
+        </Link>
     )
 };
 
-export default PostPreview
+export default PostPreview;

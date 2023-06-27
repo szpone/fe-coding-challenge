@@ -10,6 +10,9 @@
     font-weight: 700;
     font-family: Advent Pro;
     line-height: 24px;
+    font-size: 16px;
+    padding-bottom: 37px;
+    padding-top: 12px;
 }
 
 .blogImg {
@@ -21,7 +24,7 @@
 }
 
 .imgContainer {
-    display: "flex";
+    display: flex;
 }
 
 .pillContainer {
@@ -39,4 +42,89 @@
     padding-bottom: 50px;
 }
 
-/* <div style={{display: "flex", flexDirection: "column", maxWidth: "344px", paddingTop: "40px", paddingBottom: "50px"}}> */
+.details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.date {
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.postTitle {
+    color: var(--orange);
+    font-size: 28px;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 45px; 
+}
+
+.body {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    font-family: Advent Pro, sans-serif;
+    letter-spacing: 1px;
+}
+
+.place {
+    color: var(--blog);
+    font-size: 18px;
+    font-family: Inter;
+    letter-spacing: 1px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.eventDetails {
+    color: var(--orange);
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 24px;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.previewSection {
+    display: flex;
+    justify-content: center;
+}
+
+.sectionContent {
+    text-align: center;
+    width: 50%;
+}
+
+.sectionBody {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    margin: auto;
+    width: 50%;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+}

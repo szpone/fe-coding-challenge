@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './navbar.module.css'
+import styles from './layout.module.css'
 import '../../../src/app/globals.css';
 
 const Navbar = ({ children }: any) => {

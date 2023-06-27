@@ -1,16 +1,18 @@
 import React from 'react';
 import Main from './main';
-import Header from './header';
+import Navbar from './navbar';
 import Image from 'next/image';
-import GigaclearLogo from '../../../public/assets/Vector.svg'
+import GigaclearLogo from '../../../public/assets/logo.svg'
 
-const Layout = () => {
+const Layout = ({ children }: any) => {
     return (
         <>
-        <Header>
+        <Navbar>
             <Image src={GigaclearLogo} alt="Gigaclear" priority />
-        </Header>
-        <Main />
+        </Navbar>
+        <Main>
+            {children}
+        </Main>
 
         </>
     )
